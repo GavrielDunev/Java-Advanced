@@ -17,8 +17,6 @@ import bakery.repositories.interfaces.*;
 public class Main {
     public static void main(String[] args) {
 
-        String a = " ";
-        int a1 = a.length();
         FoodRepository<BakedFood> foodRepository = new FoodRepositoryImpl<>();
         DrinkRepository<Drink> drinkRepository = new DrinkRepositoryImpl<>();
         TableRepository<Table> tableRepository = new TableRepositoryImpl<>();

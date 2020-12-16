@@ -29,33 +29,33 @@ public abstract class BaseTable implements Table {
         this.setPrice();
     }
 
-    public void setTableNumber(int tableNumber) {
+    private void setTableNumber(int tableNumber) {
         this.tableNumber = tableNumber;
     }
 
-    public void setCapacity(int capacity) {
+    private void setCapacity(int capacity) {
         if (capacity < 0) {
             throw new IllegalArgumentException(INVALID_TABLE_CAPACITY);
         }
         this.capacity = capacity;
     }
 
-    public void setPricePerPerson(double pricePerPerson) {
+    private void setPricePerPerson(double pricePerPerson) {
         this.pricePerPerson = pricePerPerson;
     }
 
-    public void setNumberOfPeople(int numberOfPeople) {
+    private void setNumberOfPeople(int numberOfPeople) {
         if (numberOfPeople <= 0) {
             throw new IllegalArgumentException(INVALID_NUMBER_OF_PEOPLE);
         }
         this.numberOfPeople = numberOfPeople;
     }
 
-    public void setReserved(boolean reserved) {
+    private void setReserved(boolean reserved) {
         this.isReserved = reserved;
     }
 
-    public void setPrice() {
+    private void setPrice() {
         this.price = this.getPricePerPerson() * this.getNumberOfPeople();
     }
 
